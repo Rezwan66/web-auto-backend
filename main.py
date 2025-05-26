@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import ollama
 
 app=FastAPI()
 
@@ -41,3 +42,8 @@ async def submit_form(data: FormData):
             "details": data.details
         }
     }
+
+@app.post('/generate')
+def generate(prompt: str):
+    response=ollama.chat(model='codeqwen',messages=[{'role':'user','content':prompt}])
+    return {'response':response['message']['content']}
