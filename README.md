@@ -12,8 +12,8 @@ my-fastapi-app
 │   │   ├── __init__.py  # Marks the api directory as a package
 │   │   ├── users.py     # User management API routes
 │   │   └── items.py     # Item management API routes
-│   └── models           # Directory containing data models
-│       └── __init__.py  # Marks the models directory as a package
+│   ├── models.py        # Directory containing data models
+│   └── utils.py         # Utility functions
 ├── requirements.txt      # Project dependencies
 └── README.md             # Project documentation
 ```

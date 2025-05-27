@@ -2,3 +2,7 @@ FastAPI
 uvicorn
 pydantic
 ollama
+httpx
+python-dotenv
+requests
+selenium
