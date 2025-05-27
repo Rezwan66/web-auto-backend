@@ -1,5 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+from dotenv import load_dotenv # Explicit import
+load_dotenv()  # Call the function
+
 from app.routes import form_filling_routes, llm_routes
 
 app=FastAPI()
